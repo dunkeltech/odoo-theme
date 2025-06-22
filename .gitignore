@@ -1,0 +1,92 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.log
+
+# Python cache
+*.pyo
+*.pyd
+
+# Test coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Mypy / Pyright / Pyre
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pyright/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Build / distribution
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PEP 582; used by e.g. pdm
+__pypackages__/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Pipenv
+Pipfile.lock
+
+# Odoo specific
+*.assets.json
+*.iml
+*.zip
+*.pot
+*.mo
+__openerp__.py
+.odoo_temp/
+
+# Backup files
+*~
+*.bak
+*.orig
+*.old

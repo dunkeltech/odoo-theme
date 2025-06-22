@@ -1,0 +1,23 @@
+// Hauptfarben
+$o-community-color: #28a745;         // Sattes Bootstrap-Grün
+$o-enterprise-color: #218838;        // Dunkleres Grün für Enterprise
+$o-enterprise-action-color: #1e7e34; // Noch dunkler für Buttons
+
+// Branding
+$o-brand-odoo: #28a745;              // Gleich mit Community-Farbe
+$o-brand-primary: #28a745;           // Für Links, Fokus etc.
+
+// Bootstrap-Feedbackfarben
+$o-success: #28a745;                 // Grün für Erfolg
+$o-info: #17a2b8;                    // Türkis für Info
+$o-warning: #ffc107;                 // Gelb für Warnung
+$o-danger: #dc3545;                  // Rot für Fehler
+
+// Textfarben – Theme Mapping
+$o-theme-text-colors: (
+  "primary": $o-brand-primary,
+  "success": $o-success,
+  "info": $o-info,
+  "warning": $o-warning,
+  "danger": $o-danger,
+);
