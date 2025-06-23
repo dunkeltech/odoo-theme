@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+  <!-- Patch des WebClient-Templates -->
+  <t t-name="dunkel_tech_backend_theme.WebClient" t-inherit="web.WebClient" t-inherit-mode="extension">
+    <!-- App Switcher Icon (Home Button) -->
+    <xpath expr="//AppSwitcher" position="attributes">
+      <attribute name="t-on-click">toggleSidebar</attribute>
+    </xpath>
+  </t>
+</templates>

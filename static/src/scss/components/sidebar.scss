@@ -1,16 +1,96 @@
-// .o_app.o_home_menu {
-//     display: block !important;
-//     position: fixed;
-//     top: $o-navbar-height;
-//     left: 0;
-//     width: 220px;
-//     height: calc(100% - #{$o-navbar-height});
-//     background: white;
-//     z-index: 10;
-//     overflow-y: auto;
-//     box-shadow: 2px 0 4px rgba(0,0,0,0.1);
-// }
+.o_sidebar {
+    position: fixed;
+    top: var(--o-navbar-height, 48px);
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    background-color: #fff;
+    z-index: 1001;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    transition: width 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
 
-// .o_web_client {
-//     margin-left: 220px;
-// }
+body.sidebar-collapsed .o_sidebar {
+    width: 55px;
+}
+
+.sidebar-toggle {
+    height: 48px;
+    width: 100%;
+    background: $o-community-color;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar-toggle i {
+    font-size: 20px;
+}
+
+.o_sidebar .app-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.app-item {
+    padding: 10px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.app-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+body.sidebar-collapsed .app-label {
+    display: none;
+}
+
+.o_action_manager {
+    transition: margin-left 0.2s ease;
+}
+
+body.sidebar-collapsed .o_action_manager {
+    margin-left: 55px !important;
+}
+
+body:not(.sidebar-collapsed) .o_action_manager {
+    margin-left: 220px !important;
+}
+
+// Auch Layoutbereiche verschieben
+body.o_web_client .o_main,
+body.o_web_client .o_action_manager,
+body.o_web_client .o_content {
+    margin-left: 0; // kein zusätzlicher Abstand nötig, body verschiebt schon alles
+}
+
+.app-item.active {
+    background-color: $o-brand-primary;
+    color: white;
+
+    .app-icon {
+        filter: brightness(0) invert(1);
+    }
+}
+

@@ -1,0 +1,29 @@
+.o_notebook {
+    .nav-tabs {
+        .nav-item {
+            .nav-link {
+                border: 1px solid #ddd; // dünner Rand oben, rechts, links
+                border-bottom: none;
+                border-radius: 0;
+                margin-bottom: -1px;
+                padding: 8px 12px;
+                background: #f9f9f9;
+                color: #555;
+
+                &:hover {
+                    background: #f0f0f0;
+                }
+
+                &.active {
+                    border-top: 3px solid #28a745; // grüner, dicker oberer Rand
+                    border-left: 1px solid #ddd;
+                    border-right: 1px solid #ddd;
+                    border-bottom: none;
+                    background: #fff;
+                    color: #000;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

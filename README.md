@@ -27,7 +27,7 @@ This module provides a custom backend theme for Odoo 18 Community Edition.
 
 4. Activate Developer Mode in Odoo.
 5. Go to **Apps**, update the app list, and install **dunkelTech Backend Theme**.
-6. Refresh the page and verify the green top bar and visible sidebar.
+6. Refresh the page and verify the green top bar and the application sidebar.
 
 ---
 

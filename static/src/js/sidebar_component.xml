@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="dunkel_tech_backend_theme.Sidebar" owl="1">
+        <div class="o_sidebar">
+            <ul class="app-list">
+                <t t-foreach="state.apps" t-as="app" t-key="app.id">
+                    <li t-attf-class="app-item #{state.currentApp?.id === app.id ? 'active' : ''}">
+                        <a t-att-href="app.href">
+                            <img class="app-icon" t-att-src="app.webIconData"/>
+                            <span class="app-label"><t t-esc="app.label"/></span>
+                        </a>
+                    </li>
+                </t>
+            </ul>
+        </div>
+    </t>
+</templates>

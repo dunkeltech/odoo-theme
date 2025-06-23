@@ -1,10 +1,9 @@
-// .o_main_navbar {
-//     background-color: $o-community-color !important;
-//     border-bottom: 1px solid darken($o-community-color, 10%) !important;
-// }
-
-// .o_main_navbar .o_menu_brand,
-// .o_main_navbar .nav-link,
-// .o_main_navbar .dropdown-toggle {
-//     color: white !important;
-// }
+.o_main_navbar {
+    background-color: $o-community-color !important;
+    border-bottom: 1px solid darken($o-community-color, 10%) !important;
+}
+.o_main_navbar .o_menu_brand,
+.o_main_navbar .dropdown-toggle,
+.o_main_navbar .nav-link {
+    color: white !important;
+}
