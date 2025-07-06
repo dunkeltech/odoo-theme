@@ -5,7 +5,9 @@
             <ul class="app-list">
                 <t t-foreach="state.apps" t-as="app" t-key="app.id">
                     <li t-attf-class="app-item #{state.currentApp?.id === app.id ? 'active' : ''}">
-                        <a t-att-href="app.href">
+                        <a t-att-href="app.href"
+                            t-on-click.prevent="() => { env.services.app_menu.selectApp(app); }">
+
                             <img class="app-icon" t-att-src="app.webIconData"/>
                             <span class="app-label"><t t-esc="app.label"/></span>
                         </a>

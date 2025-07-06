@@ -15,7 +15,7 @@
                 }
 
                 &.active {
-                    border-top: 3px solid #28a745; // grüner, dicker oberer Rand
+                    border-top: 3px solid $o-brand-primary; // grüner, dicker oberer Rand
                     border-left: 1px solid #ddd;
                     border-right: 1px solid #ddd;
                     border-bottom: none;

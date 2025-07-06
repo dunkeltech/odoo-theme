@@ -12,14 +12,12 @@ export class Sidebar extends Component {
         this.appMenu = useService("app_menu");
 
         this.state = useState({
-            apps: this.appMenu.getAppsWithMenus(),
+            apps: this.appMenu.getApps(),
             currentApp: null,
         });
 
-        console.log(this.state.apps);
-
         onWillStart(async () => {
-            this.state.apps = await this.appMenu.getAppsWithMenus();
+            this.state.apps = await this.appMenu.getApps();
             this.state.currentApp = this.appMenu.getCurrentApp();
         });
 
@@ -37,18 +35,11 @@ export class Sidebar extends Component {
             return;
         }
         this.state.currentApp = this.appMenu.getCurrentApp();
+        document.body.classList.add('sidebar-collapsed');
     }
 
     toggleSidebar() {
         document.body.classList.toggle("sidebar-collapsed");
-    }
-
-    onAppClick(ev) {
-        const appId = parseInt(ev.currentTarget.dataset.appId);
-        const app = this.state.apps.find(a => a.id === appId);
-        if (app && this.appMenu) {
-            this.appMenu.selectApp(app);
-        }
     }
 
 }

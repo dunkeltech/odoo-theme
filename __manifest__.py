@@ -2,15 +2,22 @@
     "name": "dunkelTech Backend Theme",
     "version": "18.0.3.0.0",
     "author": "dunkel.tech",
-    "depends": ["web"],
+    "depends": ["base_setup", "web"],
+    "data": [
+        "views/res_config_settings_view.xml",
+    ],
+
     "assets": {
         "web._assets_primary_variables": [
             ("prepend", "dunkel_tech_backend_theme/static/src/scss/variables.scss")
         ],
         "web.assets_backend": [
             "dunkel_tech_backend_theme/static/src/scss/tabs.scss",
+            "dunkel_tech_backend_theme/static/src/scss/dialog.scss",
+            "dunkel_tech_backend_theme/static/src/scss/header.scss",
             "dunkel_tech_backend_theme/static/src/scss/components/navbar.scss",
             "dunkel_tech_backend_theme/static/src/scss/components/sidebar.scss",
+            "dunkel_tech_backend_theme/static/src/js/dialog_slide_patch.js",
             (
                 "after",
                 "web/static/src/webclient/webclient.js",
